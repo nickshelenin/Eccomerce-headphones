@@ -243,6 +243,73 @@ footer .underline {
   margin-bottom: 1em;
 }
 
+@media (min-width: 1024px) {
+  .main-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.social-links-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 2em;
+}
+
+@media (min-width: 1024px) {
+  .social-links-cont {
+    width: 30%;
+  }
+}
+
+.social-links-cont a {
+  color: #fff;
+  width: 200px;
+  height: 50px;
+}
+
+.social-links-cont a:hover {
+  color: #ff3e6c;
+}
+
+.social-links-cont h1 {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.social-links-cont ul {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 20%;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .social-links-cont ul {
+    margin-top: 2em;
+  }
+}
+
+.social-links-cont ul a {
+  color: #fff;
+}
+
 .footer-accordion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,68 +402,12 @@ footer .underline {
 
 @media (min-width: 1024px) {
   .footer-accordion .footer-menu .footer-submenu {
-    display: block;
+    display: initial;
   }
 }
 
 .footer-accordion .footer-menu .footer-submenu.footer-acc-active {
   display: initial;
-}
-
-.social-links-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  margin: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-  margin-top: 2em;
-}
-
-@media (min-width: 1024px) {
-  .social-links-cont {
-    width: 30%;
-  }
-}
-
-.social-links-cont a {
-  color: #fff;
-  width: 200px;
-  height: 50px;
-}
-
-.social-links-cont a:hover {
-  color: #ff3e6c;
-}
-
-.social-links-cont h1 {
-  font-size: 1.2em;
-  font-weight: 100;
-}
-
-ul {
-  width: 60%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-right: 20%;
-  margin-top: 1em;
-}
-
-@media (min-width: 768px) {
-  ul {
-    margin-top: 2em;
-  }
-}
-
-ul a {
-  color: #fff;
 }
 
 .copyright {

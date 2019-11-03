@@ -1,0 +1,392 @@
+$ipad: 768px;
+$ipadPro: 1024px;
+$desktop: 1240px;
+
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: #{$ipadPro}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  background: #f2f2f2;
+}
+
+.main-section {
+  background: url(../Images/main-banner.jpg) center;
+  background-size: cover;
+  height: 60vh;
+
+  @include ipadPro() {
+    height: 50vh;
+  }
+
+  .main-text {
+    padding-top: 8em;
+    width: 90%;
+    margin: auto;
+    @include ipad {
+      width: 70%;
+    }
+
+    @include ipadPro() {
+      width: 90%;
+      padding-top: 15em;
+    }
+
+    p {
+      color: #fff;
+      font-size: 3em;
+      margin-bottom: 2em;
+    }
+
+    a {
+      color: #fff;
+      background: #000;
+      padding: 1em 2em;
+      border-radius: 5px;
+    }
+  }
+}
+
+.section {
+  text-align: left;
+
+  .background-image {
+    background-image: url(../Images/background1.jpg);
+    background-size: cover;
+    height: 30vh;
+    color: #fff;
+    margin-bottom: 3rem;
+
+    .background-image-text {
+      width: 90%;
+      margin: auto;
+      padding-top: 1em;
+      line-height: 3em;
+
+      @include ipad {
+        width: 70%;
+        line-height: 5em;
+      }
+
+      @include ipadPro() {
+        width: 90%;
+        padding-top: 3em;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        @include ipad {
+          font-size: 4em;
+          font-weight: 100;
+        }
+      }
+
+      h3 {
+        font-size: 2em;
+        font-weight: 100;
+
+        @include ipad {
+          font-size: 2.5em;
+        }
+      }
+    }
+  }
+}
+
+.products-section {
+  @include ipadPro() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product {
+    width: 300px;
+    height: 550px;
+    margin: auto;
+    background: #fff;
+    position: relative;
+    text-align: center;
+    margin-bottom: 5em;
+
+    .slide {
+      img {
+        width: 283px;
+        height: 280px;
+        // height: auto;
+        margin: 2em 0 2em 0;
+        background-size: cover;
+      }
+    }
+
+    .slider-dots {
+      user-select: none;
+
+      .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 1em 2px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    .wishlist-icon {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      right: 10px;
+      color: #000;
+
+      &:hover {
+        color: #ff3e6c;
+        transition: 300ms ease-in-out;
+      }
+    }
+
+    .description {
+      text-align: center;
+      line-height: 2em;
+
+      p {
+        margin-left: 5%;
+        color: #000;
+      }
+
+      .headphone-name {
+        font-weight: 900;
+      }
+
+      .price {
+        font-weight: 900;
+        font-size: 1.3rem;
+        margin-bottom: 1em;
+      }
+
+      .buy-now-btn {
+        color: #fff;
+        background: #ff3e6c;
+        padding: 0.5em 1.5em;
+        border-radius: 5px;
+
+        &:hover {
+          box-shadow: 0 0 3px #5a5a5a;
+        }
+      }
+    }
+  }
+}
+
+.section-b {
+  .background-image {
+    background: url(../Images/background2.jpeg) center;
+    background-size: cover;
+  }
+}
+
+.section-c {
+  .background-image {
+    background: url(../Images/background3.jpg) center;
+    background-size: cover;
+  }
+}
+
+.section-d {
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 2em 0;
+    color: #ff3e6c;
+  }
+}
+
+footer {
+  background: #111111;
+  color: #fff;
+  padding-bottom: 3.5em;
+
+  @include ipad() {
+    padding-bottom: 15em;
+  }
+
+  @include ipadPro() {
+    padding-bottom: 40em;
+  }
+
+  .underline {
+    border-bottom: 1px solid #5a5a5a;
+    margin-left: -100%;
+    margin-bottom: 1em;
+  }
+}
+
+.main-footer {
+  @include ipadPro {
+    // display: flex;
+    // justify-content: space-between;
+  }
+}
+
+.footer-accordion {
+  display: flex;
+  .underline {
+    border-bottom: 1px solid #5a5a5a;
+    margin-left: -100%;
+    margin-bottom: 1em;
+
+    @include ipadPro() {
+      display: none;
+    }
+  }
+
+  .footer-menu {
+    width: 90%;
+    margin: auto;
+
+    .footer-link {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      padding-bottom: 1em;
+
+      .footer-plus {
+        position: relative;
+        width: 15px;
+        height: 15px;
+
+        @include ipadPro() {
+          display: none;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: #fff;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:before {
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 100%;
+          margin-left: -1.5px;
+        }
+
+        &:after {
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          margin-top: -1.5px;
+        }
+      }
+
+      .footer-plus.footer-acc-active {
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+
+      .footer-plus.footer-acc-active {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .footer-submenu {
+      transition: all 300ms;
+      line-height: 3em;
+      display: none;
+      overflow: hidden;
+
+      @include ipadPro() {
+        display: block;
+      }
+    }
+
+    .footer-submenu.footer-acc-active {
+      display: initial;
+    }
+  }
+}
+
+.social-links-cont {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2em;
+
+  @include ipadPro() {
+    width: 30%;
+  }
+
+  a {
+    color: #fff;
+    width: 200px;
+    height: 50px;
+
+    &:hover {
+      color: #ff3e6c;
+    }
+  }
+
+  h1 {
+    font-size: 1.2em;
+    font-weight: 100;
+  }
+}
+
+ul {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20%;
+  margin-top: 1em;
+
+  @include ipad {
+    margin-top: 2em;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.copyright {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 0.8em;
+  color: #adadad;
+}

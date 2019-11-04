@@ -23,6 +23,39 @@ function accClick() {
   }
 }
 
+function headerToggle() {
+  const searchbar = document.querySelector('.desktop-searchbar');
+  const closeSearchbar = document.querySelector('#close-searchbar');
+  const searchIcon = document.querySelector('.search-bar');
+  const shopLink = document.querySelector('.shop-container');
+  const shopDropdown = document.querySelector('.shop-dropdown')
+
+  searchIcon.addEventListener('click', () => {
+    searchbar.style.display = 'flex';
+  });
+
+  closeSearchbar.addEventListener('click', () => {
+    searchbar.style.display = 'none';
+  });
+ 
+  shopLink.addEventListener('click', () =>{
+    shopDropdown.classList.toggle('header-active-click')
+  })
+
+
+  // shopLink.addEventListener('mouseover', () =>{
+  //   shopDropdown.style.display = 'flex'
+  //   shopLink.classList.add('header-link-hover')
+  // })
+
+  // shopDropdown.addEventListener('mouseleave', () =>{
+  //   shopDropdown.style.display = 'none'
+  //   shopLink.classList.remove('header-link-hover')
+  // })
+}
+
+
+
 async function init() {
   await fetch('./header.html')
     .then((res) => {
@@ -33,6 +66,8 @@ async function init() {
     });
   toggle();
   accClick();
+  headerToggle();
+  shopDropdown();
 }
 
 init();

@@ -10,13 +10,8 @@
 <body>
         <header class="main-header">
             <div class="header-container">
-                    <div class="hamburger active-element">
-                        <span class="one bar active-element"></span>
-                        <span class="two bar active-element"></span>
-                        <span class="three bar active-element"></span>
-                    </div>
 
-                     <div class="desktop-header hide-mobile"> 
+                     <div class="desktop-header"> 
 
                         <div class="left-side">
 
@@ -24,24 +19,23 @@
                                     <p class="logo"><a href="index.html">HearMe</p></a>
                             </div>
 
-                            <div class="shop-container">
+                            <div class="shop-container header-link-hover">
                                 <p>SHOP</p>
-
-                                    <!-- <div class="shop-modal">
-                                        <div class="headphones">
-                                        </div>
-                                    </div> -->
                             </div>
 
-                            <div class="brands-container">
+                            <!-- <div class="brands-container header-link-hover">
                                 <p>BRANDS</p>
-                            </div>
+                            </div> -->
 
                         </div>
 
                         <div class="right-side">
 
-                            <div class="support-container">
+                                <div class="search-container header-active">
+
+                                </div>
+
+                            <div class="support-container header-link-hover">
                                 <p>SUPPORT</p>
                             </div>
 
@@ -49,39 +43,79 @@
                                 <img src="icons/man-user 1.svg" alt="">
                             </div>
 
-                            <div class="search-container">
-                                <img src="icons/magnifying-glass.svg" alt="">
-                            </div>
+                            <div class="search-bar">
+                                    <img src="icons/magnifying-glass.svg">
+                                    <!-- <input type="text" placeholder="Search"> -->
+                                </div>
 
                 
                             <div class="cart-container">
-                                <img src="icons/shopping-cart 1.svg">
-                                <p class="items-number">0</p>
+                                <img src="icons/shopping-bag.svg">
+                                <p class="items-count">0</p>
                             </div>
-
                         </div>
-
-                        <!-- <div class="shop-modal">
-                                <div class="headphones">
-
-                                </div>
-                            </div> -->
-
                      </div>
 
-                     <div class="shop-modal">
+                    <div class="shop-dropdown">
                             <div class="headphones">
+                                <a href="#">
+                                    <img src="images/desktop-dropdown-1-4.webp">
+                                    <p class="dropdown-image-text">HEADPHONES</p>
+                                </a>
+            
+                                <ul>
+                                    <li><a href="#">Wireless Headphones</a></li>
+                                    <li><a href="#">Wired Headphones</a></li>
+                                </ul>
 
+                                <a href="#" class="dropdown-cta">Shop All Headphones</a>
                             </div>
+
+                            <div class="headphones">
+                                <a href="#">
+                                    <img src="images/desktop-dropdown-1-2.webp" alt="">
+                                    <p class="dropdown-image-text">EARBUDS</p>
+                                </a>
+                                    <ul>
+                                        <li><a href="#">Wireless Earbuds</a></li>
+                                        <li><a href="#">Wired Earbuds</a></li>
+                                    </ul>
+    
+                                    <a href="#" class="dropdown-cta">Shop All Earbuds</a>
+                                </div>
                     </div>
 
-                            <div class="logo-container hide-desktop">
+                    <!-- <div class="brands-dropdown">
+                        <ul>
+                            <li><a href="#">HELP CENTER</a></li>
+                            <li><a href="#">PRODUCT SETUP</a></li>
+                            <li><a href="#">WARRANTY</a></li>
+                            <li><a href="#">ORDER STATUS</a></li>
+                            <li><a href="#">INTERNATIONAL SUPPORT</a></li>
+                        </ul>
+                    </div> -->
+
+                    <div class="desktop-searchbar header-active">
+                        <input type="text" placeholder="Search">
+                        <a href="#"><img src="icons/close-searchbar.svg" id="close-searchbar"></a>
+                    </div>
+
+                    <div class="mobile-header">
+
+                    <div class="hamburger active-element">
+                            <span class="one bar active-element"></span>
+                            <span class="two bar active-element"></span>
+                            <span class="three bar active-element"></span>
+                        </div>
+
+
+                            <div class="logo-container">
                                     <p class="logo"><a href="#main-section">HearMe</p></a>
                             </div>
                 
-                            <div class="cart-container hide-desktop">
-                                <img src="icons/shopping-cart 1.svg" class="hide-desktop">
-                                <p class="items-number hide-desktop">0</p>
+                            <div class="cart-container">
+                                <img src="icons/shopping-bag.svg" class="hide-desktop">
+                                <p class="items-count">0</p>
                             </div>
 
                         <ul class="accordion active-element hide-desktop">
@@ -98,7 +132,6 @@
                                         <li><a href="#">Wired Headphones</a></li>
                                         <li><a href="#">Shop All headphones</a></li>
                                     </ul>
-             
                             </li>
 
                             <div class="underline"></div>
@@ -165,7 +198,6 @@
                                 </div>
                             
                             </li>
-
                                 <div class="underline"></div>
 
                             <li class="menu">
@@ -174,11 +206,9 @@
                                     <img src="icons/magnifying-glass.svg" alt="">
                                     <input type="text" placeholder="Search">
                                 </div>
-
                             </li>
-
                         </ul>
-        
+                    </div>
             </div>
         </header>
                                                
